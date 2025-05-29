@@ -1,4 +1,6 @@
+---
 deployment:
   tasks:
-    - echo "Deploying static site files..."
-    - rsync -av --delete ./ $HOME/public_html/frontend/
+    - export DEPLOYPATH=/home/p2pud/public_html/frontend
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH
