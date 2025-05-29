@@ -1,5 +1,4 @@
 deployment:
   tasks:
-    - npm install
-    - npm run build
-    - rsync -av --delete ./build/ $HOME/public_html/frontend/
+    - echo "Deploying static site files..."
+    - rsync -av --delete ./ $HOME/public_html/frontend/
